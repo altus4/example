@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { index } from "@/actions/App/Http/Controllers/ProductController";
 import { Head, Link, Form } from '@inertiajs/vue3';
-import { ref, computed } from 'vue';
+import { ref } from 'vue';
 import {
     Card,
     CardContent,
@@ -63,7 +63,6 @@ const formatRelevance = (score?: number): string => {
                         :action="index.url"
                         method="get"
                         :reset-on-success="['password']"
-                        v-slot="{ errors, processing }"
                         class="flex flex-col gap-6"
                     >
                         <Input
